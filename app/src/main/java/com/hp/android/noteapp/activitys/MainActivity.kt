@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.hp.android.noteapp.R
 import com.hp.android.noteapp.databinding.ActivityMainBinding
@@ -38,8 +37,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun init() {
-        noteViewModel.getAllNote().observe(this, Observer {
+    private fun init() {
+        noteViewModel.getAllNote().observe(this, {
             // update UI, vi nhu set adapter cho recycler view
             Log.d("HuynhPVd", "init: size note " + it.size)
             Log.d("HuynhPVd", "init: " + it)
