@@ -55,7 +55,7 @@ dependencies {
     implementation("androidx.room:room-ktx:$roomVersion")
 
     // live data view model
-    def lifecycle_version = "2.4.0"
+    def lifecycle_version = "2.2.0"
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     // LiveData
